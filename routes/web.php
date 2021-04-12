@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//タスクの一覧表示
+Route::get('/tasks', 'TaskController@index');
+
+//タスクの保存
+Route::post('/task', 'TaskController@store');
+
+//タスクの削除
+Route::delete('/task/{task}', 'TaskController@destroy');
